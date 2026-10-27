@@ -1,0 +1,164 @@
+{
+  "schema": 1,
+  "builtAt": "2026-10-27T21:32:49.969Z",
+  "cases": [
+    {
+      "id": "v40-browser-example-01",
+      "title": "Example 01 \u2014 Drive 15 m, then stop.",
+      "version": "v40",
+      "scene": 1,
+      "kind": "browser",
+      "fidelity": "Recorded browser checkpoints and traveled path; position and timing between samples are interpolated. This is not a video.",
+      "source": {
+        "path": "historical-development/refactor-v40/results/browser-run-config.json",
+        "sha256": "b298189edc045d1c8cd6434a75a43a6ed993b1f4d9a5c378c8207fbaba3550a9",
+        "session": "5e351b47-bae7-4a45-a9ba-7a7401ec69c8"
+      },
+      "recordedAt": "2026-10-27T21:19:31.094Z",
+      "findings": [],
+      "replayVerified": false,
+      "summary": {
+        "completed": 1
+      },
+      "duration": 88.18,
+      "issue": false,
+      "commandCount": 1,
+      "actions": [
+        "go_straight"
+      ]
+    },
+    {
+      "id": "v40-browser-example-02",
+      "title": "Example 02 \u2014 Go straight, then stop.",
+      "version": "v40",
+      "scene": 1,
+      "kind": "browser",
+      "fidelity": "Recorded browser checkpoints and traveled path; position and timing between samples are interpolated. This is not a video.",
+      "source": {
+        "path": "historical-development/refactor-v40/results/browser-run-config.json",
+        "sha256": "2ffe866276782cecb84a122dfc0fc4d444227ee88fbd7a911cda351e9d3f7c9e",
+        "session": "5e351b47-bae7-4a45-a9ba-7a7401ec69c8"
+      },
+      "recordedAt": "2026-10-27T21:21:01.957Z",
+      "findings": [],
+      "replayVerified": false,
+      "summary": {
+        "completed": 2
+      },
+      "duration": 92.336,
+      "issue": false,
+      "commandCount": 2,
+      "actions": [
+        "go_straight",
+        "stop"
+      ]
+    },
+    {
+      "id": "v40-browser-example-03",
+      "title": "Example 03 \u2014 Turn left, then stop.",
+      "version": "v40",
+      "scene": 1,
+      "kind": "browser",
+      "fidelity": "Recorded browser checkpoints and traveled path; position and timing between samples are interpolated. This is not a video.",
+      "source": {
+        "path": "historical-development/refactor-v40/results/browser-run-config.json",
+        "sha256": "13b5f4a6bcece62af08fc0565db03774eecdc65233d279ff219b42fadfb2b37d",
+        "session": "5e351b47-bae7-4a45-a9ba-7a7401ec69c8"
+      },
+      "recordedAt": "2026-10-27T21:22:38.115Z",
+      "findings": [],
+      "replayVerified": false,
+      "summary": {
+        "completed": 2
+      },
+      "duration": 76.183,
+      "issue": false,
+      "commandCount": 2,
+      "actions": [
+        "turn_left",
+        "stop"
+      ]
+    },
+    {
+      "id": "v40-browser-example-04",
+      "title": "Example 04 \u2014 Turn right, then stop.",
+      "version": "v40",
+      "scene": 1,
+      "kind": "browser",
+      "fidelity": "Recorded browser checkpoints and traveled path; position and timing between samples are interpolated. This is not a video.",
+      "source": {
+        "path": "historical-development/refactor-v40/results/browser-run-config.json",
+        "sha256": "bceddd1b7aa69cb2a1311cef1fb74733baf7e45a7f0c486a0f0d4520863619d0",
+        "session": "1574a924-870b-4ec2-b4bc-874a80ef110b"
+      },
+      "recordedAt": "2026-10-27T21:24:09.022Z",
+      "findings": [],
+      "replayVerified": false,
+      "summary": {
+        "completed": 2
+      },
+      "duration": 99.926,
+      "issue": false,
+      "commandCount": 2,
+      "actions": [
+        "turn_right",
+        "stop"
+      ]
+    },
+    {
+      "id": "v40-browser-example-05",
+      "title": "Example 05 \u2014 Go straight, change one lane right, then stop.",
+      "version": "v40",
+      "scene": 1,
+      "kind": "browser",
+      "fidelity": "Recorded browser checkpoints and traveled path; position and timing between samples are interpolated. This is not a video.",
+      "source": {
+        "path": "historical-development/refactor-v40/results/browser-run-config.json",
+        "sha256": "3d2bea650ef4e6ba9fe06a4224587693a453750459165f2dc315938b937c3573",
+        "session": "f0e5d9a3-0b8f-4644-879b-8148297c8f51"
+      },
+      "recordedAt": "2026-10-27T21:26:00.314Z",
+      "findings": [],
+      "replayVerified": false,
+      "summary": {
+        "completed": 3
+      },
+      "duration": 87.604,
+      "issue": false,
+      "commandCount": 3,
+      "actions": [
+        "go_straight",
+        "lane_change_right",
+        "stop"
+      ]
+    },
+    {
+      "id": "v40-browser-example-06",
+      "title": "Example 06 \u2014 Go straight, change one lane right, then change one lane left and stop.",
+      "version": "v40",
+      "scene": 1,
+      "kind": "browser",
+      "fidelity": "Recorded browser checkpoints and traveled path; position and timing between samples are interpolated. This is not a video.",
+      "source": {
+        "path": "historical-development/refactor-v40/results/browser-run-config.json",
+        "sha256": "34c890fe01be3d15274355a938f73adeee3b8a6dc0128656af261d466ceda5be",
+        "session": "f0e5d9a3-0b8f-4644-879b-8148297c8f51"
+      },
+      "recordedAt": "2026-10-27T21:27:35.867Z",
+      "findings": [],
+      "replayVerified": false,
+      "summary": {
+        "completed": 4
+      },
+      "duration": 107.018,
+      "issue": false,
+      "commandCount": 4,
+      "actions": [
+        "go_straight",
+        "lane_change_right",
+        "lane_change_left",
+        "stop"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "parsed",
+        "needs_clarification"
+      ]
+    },
+    "stages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "go_straight",
+              "keep_lane",
+              "turn_left",
+              "turn_right",
+              "lane_change_left",
+              "lane_change_right",
+              "select_lane",
+              "stop",
+              "hold_stopped",
+              "slow_down",
+              "speed_up",
+              "yield",
+              "pull_over",
+              "park",
+              "resume",
+              "follow_vehicle",
+              "overtake",
+              "navigate_to",
+              "u_turn",
+              "unsupported",
+              "continuous_drive",
+              "set_speed",
+              "reverse",
+              "emergency_stop",
+              "cancel",
+              "reverse_continuous"
+            ]
+          },
+          "source_clause": {
+            "type": "string"
+          },
+          "trigger": {
+            "type": "string",
+            "enum": [
+              "now",
+              "after_previous",
+              "elapsed_time",
+              "distance",
+              "traffic_light",
+              "intersection",
+              "stop_sign",
+              "object_event",
+              "unknown"
+            ]
+          },
+          "trigger_text": {
+            "type": "string"
+          },
+          "trigger_value": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "target_text": {
+            "type": "string"
+          },
+          "lane_reference": {
+            "type": "string",
+            "enum": [
+              "none",
+              "leftmost",
+              "rightmost",
+              "relative_left",
+              "relative_right"
+            ]
+          },
+          "lane_number": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "completion_text": {
+            "type": "string"
+          },
+          "constraints": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "travel_distance_m": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "stop_at_end": {
+            "type": "boolean"
+          },
+          "target_speed_mps": {
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "action",
+          "source_clause",
+          "trigger",
+          "trigger_text",
+          "trigger_value",
+          "target_text",
+          "lane_reference",
+          "lane_number",
+          "completion_text",
+          "constraints",
+          "travel_distance_m",
+          "stop_at_end",
+          "target_speed_mps"
+        ]
+      }
+    },
+    "unresolved_text": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "explanation": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "status",
+    "stages",
+    "unresolved_text",
+    "explanation"
+  ]
+}

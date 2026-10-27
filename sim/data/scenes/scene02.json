@@ -1,0 +1,23 @@
+{
+  "scene": 2,
+  "origin_xy_m": [
+    664219.7691429307,
+    3997418.647628219
+  ],
+  "source_epsg": 32611,
+  "map_path": "data/nuplan/maps/us-nv-las-vegas-strip/9.15.1915/map.gpkg",
+  "start_pose": {
+    "xy": [
+      0.0,
+      0.0
+    ],
+    "heading": 2.4937753677368164
+  },
+  "provenance": {
+    "manifest": "runs/project-v3/automatic-road-v9/input-manifest.json",
+    "conversion": "samples/project-v3/curated-turns-20261019T072937Z/02-left/conversion.json",
+    "state": "runs/project-v3/language-choice-v1/02-left/internal_0000.npz",
+    "conversion_sha256": "9dea9086375c8f7a2467ef0c62af0c150f9a5511ef31b63b07eeb66e72473c06",
+    "state_sha256": "d12403810cc301cd5a53544994012bc924cb5e14a2bd069274f6f1068800379d"
+  }
+}
