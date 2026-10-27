@@ -1,0 +1,14 @@
+'use strict';
+const {spawnSync} = require('node:child_process');
+const fs = require('node:fs');
+const path = require('node:path');
+const {pythonCommand, repoRoot} = require('../runtime.cjs');
+const unit = path.join(__dirname, 'unit');
+fs.mkdirSync(path.join(__dirname, 'results'), {recursive: true});
+const files = fs.readdirSync(unit).filter(name => name.endsWith('.test.mjs')).sort().map(name => path.join(unit, name));
+const js = spawnSync(process.execPath, ['--test', ...files], {cwd: repoRoot, stdio: 'inherit'});
+if (js.error || js.status !== 0) process.exit(js.status || 1);
+const command = pythonCommand(path.join(unit, 'test_contract_geometry.py'));
+const py = spawnSync(command.file, command.args, {cwd: repoRoot, env: command.env, stdio: 'inherit'});
+if (py.error) console.error(py.error.message);
+process.exit(py.status || (py.error ? 1 : 0));

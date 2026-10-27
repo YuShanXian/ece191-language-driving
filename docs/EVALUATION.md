@@ -33,7 +33,9 @@ simulation, or real-vehicle validation. Bounded search can miss a reachable
 route. Geometry checks do not establish driving safety. Provider availability
 and language interpretation are separate from deterministic planner tests.
 
-Selected historical UI examples (not new benchmark results):
+Selected historical UI examples (not new benchmark results), copied from
+`refactor-v40/results/example-04.png`, `example-05.png`, and `example-06.png`.
+The first is the README hero; the remaining two are shown below.
 
 ![Lane change after going straight](images/lane-change.png)
 
