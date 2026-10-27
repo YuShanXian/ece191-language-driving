@@ -1,0 +1,8 @@
+# Runtime imports; the historical training stack is not needed for navigation.
+numpy>=1.26,<3
+pandas>=2.2,<3
+shapely>=2.0,<3
+geopandas>=1.0,<2
+pyproj>=3.6,<4
+scipy>=1.11,<2
+# Optional browser recorder: install playwright separately, into your local env.
