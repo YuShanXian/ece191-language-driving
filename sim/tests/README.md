@@ -76,5 +76,5 @@ their distinct recorder behavior while importing the current app.
 `sim/review-data-full/` collection, never the committed review subset.
 
 [SOURCES.md](SOURCES.md) identifies the newest source of each collected test.
-One-off probes, source rewriters, and historical report generators are in
-`archive/dev-scripts/` and are not test entry points.
+One-off probes, source rewriters, and historical report generators are not part of
+this repository.

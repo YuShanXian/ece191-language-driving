@@ -1,9 +1,0 @@
-from pathlib import Path
-p=Path('historical-project/runs/project-v3/instruction-priority-v7/human-review/target-picker.js');s=p.read_text(encoding='utf-8-sig')
-s=s.replace('const targetView={},targetNearby={},targetPreview={};','const targetView={},targetNearby={},targetPreview={},targetRevision={};let targetPending=0;const targetErrors=new Set();')
-s=s.replace('const row=JSON.parse(JSON.stringify(targetRow(s,c))),id=targetKey(s,c);','const row=JSON.parse(JSON.stringify(targetRow(s,c))),id=targetKey(s,c);const revision=targetRevision[id]=(targetRevision[id]||0)+1;targetPending++;')
-s=s.replace("if(e)e.textContent='\u76ee\u6807\u5df2\u4fdd\u5b58\u5230 D \u76d8 ✓';", "if(e && targetRevision[id]===revision)e.textContent='\u76ee\u6807\u5df2\u4fdd\u5b58\u5230 D \u76d8 ✓';targetErrors.delete(id);")
-s=s.replace("catch(e){let p=document.getElementById('target-status-'+id);if(p)p.textContent='\u76ee\u6807\u4fdd\u5b58\u5931\u8d25，\u8bf7\u70b9“\u91cd\u8bd5\u4fdd\u5b58”';}","catch(e){targetErrors.add(id);let p=document.getElementById('target-status-'+id);if(p)p.textContent='\u76ee\u6807\u4fdd\u5b58\u5931\u8d25，\u8bf7\u70b9“\u91cd\u8bd5\u4fdd\u5b58”';}finally{targetPending--;}")
-s+="\nwindow.addEventListener('beforeunload',e=>{if(targetPending||targetErrors.size){e.preventDefault();e.returnValue='';}});\n";p.write_text(s,encoding='utf-8')
-# Keep the picker mounted if static report figures are regenerated later.
-p=Path('historical-project/scripts/report_feedback_v7.py');s=p.read_text(encoding='utf-8-sig');old="(out/'index.html').write_text(s,encoding='utf-8')";new="(out/'index.html').write_text(s.replace('</html>','<script src=\"/target-picker.js\"></script></html>') if (out/'target-picker.js').exists() else s,encoding='utf-8')";assert old in s;s=s.replace(old,new);p.write_text(s,encoding='utf-8')

@@ -22,6 +22,8 @@ establish that the requested sequence was executed. [Problem statement](docs/PRO
 
 [Doh's track](approaches/mtr-selection/README.md) · [System architecture](docs/ARCHITECTURE.md)
 
+Yushan first tried selecting MTR candidates too, but MTR predicts likely futures from scene history, so the requested maneuver was often not among its candidates; she switched to building the route directly from the map's lane graph, while Doh continues the MTR track.
+
 ## Demo / quick start
 
 Install Node.js and Python, then run these commands from the repository root.
@@ -76,7 +78,6 @@ LICENSE               MIT for project code; external data keeps its own terms
 docs/                 Problem, architecture, data, evaluation, selected figures
 approaches/           Doh's MTR selection track
 sim/                  Current application, parser, scene metadata, tests, review subset
-archive/              Yushan's earlier MTR pipeline and historical research code
 ```
 
 ECE191 · Group 4 · Yushan Xian and Hyungjun Doh.

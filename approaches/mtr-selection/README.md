@@ -11,5 +11,4 @@ claimed here.
 
 **code to be added by Hyungjun Doh**
 
-This track remains part of the team project. `archive/mtr-baseline/` contains
-Yushan's separate earlier MTR attempt and must not be presented as Doh's code.
+This track remains part of the team project.

@@ -19,8 +19,8 @@ of completion as well as a route.
 
 Doh explores selecting pretrained MTR candidates using language. Yushan explores
 constructing routes from map topology and playing them through an instruction
-queue. These are parallel tracks. Yushan's earlier MTR experiments were abandoned
-for her track and are archived; this is not a team-wide abandonment of MTR.
+queue. These are parallel tracks. Yushan's earlier MTR experiments were dropped
+for her track only; this is not a team-wide abandonment of MTR.
 
 The current demonstration excludes obstacle interaction, traffic-light timing,
 legal driving decisions, vehicle dynamics, and deployment to a real vehicle.
