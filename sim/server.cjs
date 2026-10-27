@@ -52,7 +52,7 @@ const server = http.createServer(async (req, res) => {
     if(await reviewApi(req,res,url))return;
     if (req.method === 'GET') {
       if (url.pathname === '/health') return json(res, 200, {
-        service: 'ece191-driving-demo',
+        service: require('./package.json').name,
         release: 'v40',
         version: require('./package.json').version,
         status: 'ok',

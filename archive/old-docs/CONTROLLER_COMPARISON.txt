@@ -1,0 +1,22 @@
+English archival digest of docs/CONTROLLER_COMPARISON.txt
+Original SHA-256: ce16b41d831a239246945579003b3d56f05fbd17c54d9d390ed606eb7e773607
+
+This is an abridged English edition, not a verbatim translation. Original notes
+and their historical paths remain unchanged in the source project.
+
+LQR and iLQR following the same saved routes
+
+The comparison used nine lane-change paths and one partial left turn, two
+controllers and three initial steering assumptions, totaling 60 runs. Both
+used a 0.2-second control period and 0.05-second motion step. The common horizon
+was 5.8 seconds because the installed iLQR initializer failed when too few
+reference points remained. No future reference points were fabricated.
+
+iLQR disabled the wall-clock timeout but retained the iteration limit and
+convergence settings. It had lower maximum center error in 16 of 30 pairs and
+higher error in 14. Road checks passed 27/30 for LQR and 30/30 for iLQR.
+iLQR used the full iteration allowance in 867/870 solves; neither convergence
+nor real-time capability was established. The comparison concerns complete
+configurations, not the algorithm name alone. The selected left turn remained
+partial. Evidence: runs/project-v2/controller-comparison-v1/ and
+config/controller-comparison-v1.json.

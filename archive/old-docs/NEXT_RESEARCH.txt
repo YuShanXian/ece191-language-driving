@@ -1,0 +1,19 @@
+English archival digest of docs/NEXT_RESEARCH.txt
+Original SHA-256: 0353ff1f08bea7260ad76db9f333625e10fd2b0a32b91469e7cfe54dc2e6c7f3
+
+This is an abridged English edition, not a verbatim translation. Original notes
+and their historical paths remain unchanged in the source project.
+
+Historical research priorities
+
+The note distinguished completed timing, controller, terminal-hold and traffic
+context diagnostics from proposed work. These diagnostics did not solve legal
+crossings, missing signal state, traffic interaction or full maneuver coverage.
+
+Further work required a directional stop-line definition, clear treatment of
+unknown/current/future signal state, reliable lane-boundary meanings, and more
+balanced turning scenarios. Candidate failures should be retained and explained.
+Recorded futures may support offline diagnostics but must not leak into online
+selection. Background language labels need timing evidence before becoming
+instruction ground truth. These are proposals, not current capability claims or
+instructions to restart historical experiments.

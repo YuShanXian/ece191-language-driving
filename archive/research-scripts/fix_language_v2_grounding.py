@@ -1,0 +1,3 @@
+from mtr_project.paths import ROOT
+p=ROOT/'scripts/execute_language_plan_v2.py';s=p.read_text(encoding='utf-8-sig');s=s.replace("if st['target_text'] and st['action']!='select_lane':return block('Needs grounded target: '+st['target_text'])", "generic_lane=st['action'] in ('lane_change_left','lane_change_right') and st['target_text'].strip().lower() in ('the left lane','the right lane','left lane','right lane','the lane to the left','the lane to the right')\n  if st['target_text'] and st['action']!='select_lane' and not generic_lane:return block('Needs grounded target: '+st['target_text'])")
+p.write_text(s)

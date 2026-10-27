@@ -1,0 +1,24 @@
+English archival digest of docs/MULTIRATE_TRACKING.txt
+Original SHA-256: 3ba19760d799d228ca26b13eb12e51dc90a2bea494d02a2b276b22e93285aaaa
+
+This is an abridged English edition, not a verbatim translation. Original notes
+and their historical paths remain unchanged in the source project.
+
+Separating controller timing, integration and actuator response
+
+The experiment separated control updates, motion steps and actuator filtering.
+The installed SDK's effective steering rate depends on the motion step, so
+reducing that step changes actuator response as well as integration precision.
+A diagnostic alternative filtered once per control update and held that result
+through intermediate motion steps. It was not a calibrated real actuator.
+
+Ten saved routes, two actuator arrangements and five timing combinations gave
+100 runs with zero initial steering. Forty matched-period cases reproduced the
+historical implementation. Shared-time and dense checks both reported 90/100
+road passes and 100/100 constant-velocity surrounding-car passes. All ten
+left-turn trials failed the road check. Finer steps improved some route errors
+and worsened others; they did not establish general improvement.
+
+Evidence: config/multirate-tracking-v1.json and
+runs/project-v2/multirate-tracking-v1/. Checks were discrete samples, not a
+continuous swept-volume proof. No MTR retraining or selector change occurred.

@@ -1,0 +1,23 @@
+English archival digest of docs/REPRODUCIBILITY.txt
+Original SHA-256: 0275ff0a8cebd4e2f9261bd893cd73834644a1a8eca9fc43764fa72ba35b925a
+
+This is an abridged English edition, not a verbatim translation. Original notes
+and their historical paths remain unchanged in the source project.
+
+Historical reproduction scope
+
+The old reproduce_project.py orchestrated functional, dependency, saved-output,
+source-fingerprint and optional environment/report checks. Its default cached
+workflow did not train or rerun MTR. The full baseline workflow reevaluated
+saved candidates and stopped if required cache entries were missing unless
+explicit computation was enabled for a new tagged experiment.
+
+Existing tags and conflicting fingerprints were protected from overwrite.
+Saved output fingerprints support later comparisons but cannot prove that an
+older cache was never changed before a fingerprint was first recorded.
+Rebuilding reports from saved data is different from new inference, and local
+cache reuse is different from installing on a fresh machine.
+
+This repository does not bundle the old databases, caches, weights or complete
+experimental configuration. Archived entry points are source references, not a
+self-contained reproduction package. Current navigation setup is in sim/README.md.

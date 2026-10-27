@@ -1,0 +1,21 @@
+English archival digest of docs/READ_FIRST.txt
+Original SHA-256: 5a71ebfff0b7a7b44adffe7061152f8ccfe42b52af97a76ee15403cb519dd1d3
+
+This is an abridged English edition, not a verbatim translation. Original notes
+and their historical paths remain unchanged in the source project.
+
+Historical setup checkpoint
+
+The initial work verified a WSL Python/PyTorch/CUDA environment, native MTR
+operators, a pretrained checkpoint and inference on an original-format scene.
+That established a motion-forecasting setup, not language-conditioned planning.
+The next phases converted nuPlan inputs, aligned doPlan references, and explored
+language selection plus road and motion checks.
+
+The upstream source was Valeo4Cast/UniTraj MTR; local compatibility changes were
+recorded in upstream-compatibility.patch. The historical doPlan checkout was
+incomplete because of platform-incompatible filenames; selected public files
+were obtained separately. Local file hashes establish identity but cannot by
+themselves establish publisher provenance. Private discussion and sharing details
+are omitted. The historical GPU/environment claims have not been revalidated as
+part of publishing this repository.

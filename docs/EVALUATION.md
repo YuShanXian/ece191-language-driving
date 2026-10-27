@@ -33,6 +33,16 @@ simulation, or real-vehicle validation. Bounded search can miss a reachable
 route. Geometry checks do not establish driving safety. Provider availability
 and language interpretation are separate from deterministic planner tests.
 
+Repository preparation checks on 2026-10-27: the fast entry point passed 37
+JavaScript and 10 Python tests; the real-map semantic regression passed 9 cases;
+the browser smoke check passed 4 checks. The isolated service on port 8776
+returned a healthy response, loaded scene 1, and planned `go_straight`.
+Python tests used the existing WSL environment read-only. Scene metadata matched
+all seven original origin/projection/start-pose records. These are engineering
+checks, not an LLM accuracy or driving-success benchmark. Live provider calls,
+the full historical experiment suite and a fresh dependency installation were
+not tested; provider adapters were exercised with controlled replies.
+
 Selected historical UI examples (not new benchmark results), copied from
 `refactor-v40/results/example-04.png`, `example-05.png`, and `example-06.png`.
 The first is the README hero; the remaining two are shown below.

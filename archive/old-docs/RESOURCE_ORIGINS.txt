@@ -1,0 +1,22 @@
+English archival digest of docs/RESOURCE_ORIGINS.txt
+Original SHA-256: 5657e4561c65473114cfbe07a9b2030ee0df21329fbd13e50326d8caab2b2ded
+
+This is an abridged English edition, not a verbatim translation. Original notes
+and their historical paths remain unchanged in the source project.
+
+Resource origins
+
+nuPlan databases provide recorded vehicle and surrounding-actor state; nuPlan
+maps provide lane and connection geometry. doPlan annotations and associated
+video/GPS resources support human interpretation and temporal association.
+The UC Merced share is storage for viewing resources, not a model or a replacement
+for the raw nuPlan database/map package. Private sharing details are not included.
+
+Public source links recorded in the original note:
+https://github.com/Mi3-Lab/doPlan
+https://arxiv.org/html/2609.38028v1
+
+The annotation-window start is not a known passenger utterance time. Counts in
+a downloaded annotation release may differ from a paper version; report the
+actual release and its fingerprint rather than mixing populations.
+See ../../docs/DATA.md for current map placement and dataset links.

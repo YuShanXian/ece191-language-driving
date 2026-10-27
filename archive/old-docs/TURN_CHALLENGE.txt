@@ -1,0 +1,24 @@
+English archival digest of docs/TURN_CHALLENGE.txt
+Original SHA-256: 270d1cd388d533812064025447de4796664a76aecb3d3cda2312784c51eb5326
+
+This is an abridged English edition, not a verbatim translation. Original notes
+and their historical paths remain unchanged in the source project.
+
+Candidate coverage in additional turning contexts
+
+Four additional nuPlan records were selected under fixed size and deduplication
+rules. Fixed relative times plus a qualifying official turn event yielded 13
+windows. All 64 internal candidates and the original five-index final subset
+were checked under the same frozen rules.
+
+Of 832 candidates, 62 passed. A left-turn suggestion existed in one window;
+right-turn suggestions existed in none. Both candidate pools gave the same
+window coverage in this population. The selected left turn only partially
+rotated through a connector and did not establish full maneuver completion.
+
+Subsequent LQR tracking of that selected route failed road checks in all six
+settings, despite passing the constant-velocity surrounding-car check. The
+record retained these failures rather than rewriting historical coverage.
+This was limited modeled evidence, not an observed accident or a balanced
+language benchmark. Evidence: runs/project-v2/turn-challenge-v1/ and
+runs/project-v2/turn-tracking-v1/.

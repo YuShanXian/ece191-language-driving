@@ -1,0 +1,22 @@
+English archival digest of docs/TERMINAL_HOLD.txt
+Original SHA-256: 638872c0d74821d58678f378577c768ef67709a5fa3405f49325f4e487427852
+
+This is an abridged English edition, not a verbatim translation. Original notes
+and their historical paths remain unchanged in the source project.
+
+Holding the final control command
+
+The controller comparison stopped at 5.8 seconds because the installed iLQR
+initializer required enough future reference points. The terminal experiment
+preserved every earlier value in all 60 runs and appended four motion steps to
+reach the existing six-second reference horizon.
+
+It held the last already-filtered acceleration and steering-rate command without
+calling the controller again or applying extra filtering. The last update
+remained at 5.6 seconds. The full trajectory and surrounding-car time base were
+rechecked, with no additional road or constant-velocity overlap failures.
+This was a terminal-hold variant, not a repaired SDK initializer, six seconds of
+normal periodic feedback, a complete turn or traffic-rule validation.
+
+Evidence: runs/project-v2/controller-terminal-hold-v1/ and
+config/controller-terminal-hold-v1.json. Existing outputs were not overwritten.

@@ -1,0 +1,22 @@
+English archival digest of docs/TRACKING_SELECTION.txt
+Original SHA-256: 2669d108dccf19db4d8309542c82a1897a584c8553124f733709c2e19fd6de20
+
+This is an abridged English edition, not a verbatim translation. Original notes
+and their historical paths remain unchanged in the source project.
+
+How modeled tracking changed candidate availability
+
+An optional filter reused saved tracking trials and required retention of the
+target margin under all six settings. It did not retrain or rerun MTR. The
+population contained 30 still-active time/direction combinations; completed
+windows remained completed.
+
+Available selections changed from 6/30 to 2/30. One development right-lane
+choice changed from candidate 25 to 10; a second-annotation left-lane choice
+retained candidate 14. Four other previous suggestions were rejected.
+This is candidate availability under a development filter, not driving success.
+Unexamined cases were not treated as passing. The selection toggle was distinct
+from the display-only tracking overlay.
+
+Evidence: config/tracking-selection-v1.json and
+runs/project-v2/tracking-selection-v1/{evaluation,verification}.json.

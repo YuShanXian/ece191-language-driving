@@ -1,0 +1,57 @@
+diff --git a/UniTraj/unitraj/datasets/base_dataset.py b/UniTraj/unitraj/datasets/base_dataset.py
+index 11c0c3b..9f543f7 100644
+--- a/UniTraj/unitraj/datasets/base_dataset.py
++++ b/UniTraj/unitraj/datasets/base_dataset.py
+@@ -183,7 +183,8 @@ class BaseDataset(Dataset):
+ 
+         for cnt, file_name in enumerate(data_list):
+             if self.config["debug_challenge"]:
+-                if "87ca3d9f-f317-3efb-b1cb-aaaf525227e5" not in file_name:
++                debug_scene = self.config.get("debug_scenario_id", "87ca3d9f-f317-3efb-b1cb-aaaf525227e5")
++                if debug_scene and debug_scene not in file_name:
+                     continue
+                 print("processing:", file_name)
+             if worker_index == 0 and cnt % max(int(len(data_list) / 10), 1) == 0:
+@@ -316,6 +317,7 @@ class BaseDataset(Dataset):
+             with open(scenario_summary_path, "wb") as f:
+                 pickle.dump(scenario_summary, f)
+             print(f"scenario processed with {nb_forecasts_to_make} forecasts to make: {file_name}")
++            file_list.update(scenario_summary)
+ 
+         return file_list
+ 
+@@ -619,6 +621,9 @@ class BaseDataset(Dataset):
+         #     print("object ids: ",track_infos["object_id"])
+         #     print("target pos: ", obj_trajs_full[20, 35]) # correct here.
+         for time_idx, current_time_index in enumerate(all_time_indices):
++            smoke_time = self.config.get("smoke_current_time_index", None)
++            if smoke_time is not None and current_time_index != smoke_time:
++                continue
+             # print("current_time_index : ", current_time_index)
+             #TODO update xyh: drop last frame which surely have no future
+             if time_idx == len(all_time_indices)-1: # be careful, drop last frame = last frame in SUB SAMPLED timesteps. see forecasting eval.
+diff --git a/UniTraj/unitraj/models/__init__.py b/UniTraj/unitraj/models/__init__.py
+index 952c6a7..b24827b 100644
+--- a/UniTraj/unitraj/models/__init__.py
++++ b/UniTraj/unitraj/models/__init__.py
+@@ -1,15 +1,18 @@
+ from unitraj.models.autobot.autobot import AutoBotEgo
+ from unitraj.models.mtr.MTR import MotionTransformer
+-from unitraj.models.wayformer.wayformer import Wayformer
+ 
+ __all__ = {
+     'autobot': AutoBotEgo,
+-    'wayformer': Wayformer,
+     'MTR': MotionTransformer
+ }
+ 
+ 
+ def build_model(config):
++    # Load this optional model only when requested; its upstream syntax error
++    # must not prevent the independent MTR implementation from importing.
++    if config.method.model_name == 'wayformer':
++        from unitraj.models.wayformer.wayformer import Wayformer
++        return Wayformer(config=config)
+     model = __all__[config.method.model_name](
+         config=config
+     )
